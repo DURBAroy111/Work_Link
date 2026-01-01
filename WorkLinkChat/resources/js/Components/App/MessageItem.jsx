@@ -4,15 +4,8 @@ import UserAvatar from "./UserAvatar";
 import { formatMessageDateLong } from "@/helpers";
 import MessageAttachments from "./MessageAttachments";
 
-const MessageItem = ({ message }) => {
+const MessageItem = ({ message, AttachmentClick }) => {
     const currentUser = usePage().props.auth.user;
-
-    const attachmentClick = (attachments, index) => {
-        const attachment = attachments[index];
-        if (attachment?.url) {
-            window.open(attachment.url, "_blank");
-        }
-    };
 
     return (
         <div
@@ -49,7 +42,7 @@ const MessageItem = ({ message }) => {
 
                     <MessageAttachments
                         attachments={message.attachments || []}
-                        attachmentClick={attachmentClick}
+                        AttachmentClick={AttachmentClick}
                     />
                 </div>
             </div>

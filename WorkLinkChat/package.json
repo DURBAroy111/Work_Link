@@ -30,6 +30,7 @@
         "daisyui": "^4.12.24",
         "emoji-picker-react": "^4.16.1",
         "react-markdown": "^10.1.0",
-        "uuid": "^13.0.0"
+        "uuid": "^13.0.0",
+        "wavesurfer.js": "^7.12.1"
     }
 }
